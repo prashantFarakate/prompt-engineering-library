@@ -5,7 +5,7 @@ Personal reference I maintain while working on AI products. Notes on techniques,
 Just what I know, what I've tried, and what worked.
 
 **List of Techniques:**
-[Zero-Shot](./techniques/05-zero-shot.md) · [Few-Shot](./techniques/03-few-shot.md) · [RTCOS](./techniques/01-rtcos.md) · [Chain of Thought](./techniques/04-chain-of-thought.md) | [ReAct](./techniques/02-react.md) | [Prompt Chaining](./techniques/06-prompt-chaining.md) | [System Prompts](./techniques/07-system-prompts.md) | [Self-Consistency](./techniques/08-self-consistency.md)
+[Zero-Shot](./techniques/05-zero-shot.md) · [Few-Shot](./techniques/03-few-shot.md) · [RTCOS](./techniques/01-rtcos.md) · [Chain of Thought](./techniques/04-chain-of-thought.md) · [ReAct](./techniques/02-react.md) · [Prompt Chaining](./techniques/06-prompt-chaining.md) · [System Prompts](./techniques/07-system-prompts.md) · [Self-Consistency](./techniques/08-self-consistency.md)
 
 [Cheat Sheet](./CHEAT-SHEET.md) · all techniques with examples on one page
 
