@@ -1,22 +1,13 @@
 # Prompt Engineering Library
-### A core prompt engineering techniques
+### Core prompt engineering techniques
 
 Personal reference I maintain while working on AI products. Notes on techniques, patterns, and things I've learned from actually using these in LLM-based systems.
 Just what I know, what I've tried, and what worked.
 
+**List of Techniques:**
+[RTCOS](./techniques/01-rtcos.md), [ReAct](./techniques/02-react.md), [Few-Shot](./techniques/03-few-shot.md), [Chain of Thought](./techniques/04-chain-of-thought.md), [Zero-Shot](./techniques/05-zero-shot.md), [Prompt Chaining](./techniques/06-prompt-chaining.md), [System Prompts](./techniques/07-system-prompts.md), [Self-Consistency](./techniques/08-self-consistency.md)
 
-## Techniques  
-**Techniques**
-— [RTCOS](./techniques/01-rtcos.md) · Role + Task + Context + Output + Style — my default for structured outputs
-— [ReAct](./techniques/02-react.md) · Reason → Act → Observe — mental model behind agents
-— [Few-Shot](./techniques/03-few-shot.md) · Show examples before the task — go-to for classification and extraction
-— [Chain of Thought](./techniques/04-chain-of-thought.md) · Ask the model to think step by step — when reasoning needs to be auditable
-— [Zero-Shot](./techniques/05-zero-shot.md) · Direct instruction, no examples — always start here
-— [Prompt Chaining](./techniques/06-prompt-chaining.md) · Output of step 1 → input of step 2 — how real pipelines work
-— [System Prompts](./techniques/07-system-prompts.md) · Product-level model config — the BA/PM's job in an AI product
-— [Self-Consistency](./techniques/08-self-consistency.md) · Run N times, take majority — for anything high-stakes
-
-** Prompt engineering techniques - When to use what**
+**When to use what**
 ```
 Simple task                      → Zero-Shot         → Direct instruction, no examples  
 consistent format needed         → Few-Shot          → Example 1, Example 2 → Now do this
