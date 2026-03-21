@@ -1,22 +1,32 @@
-# 🧠 Prompt Engineering Library
+# Prompt Engineering Library
 ### A core prompt engineering techniques
 
 Personal reference I maintain while working on AI products. Notes on techniques, patterns, and things I've learned from actually using these in LLM-based systems.
 Just what I know, what I've tried, and what worked.
 
 
-## 🗂️ Techniques Covered
+## Techniques  
+**Techniques**
+— [RTCOS](./techniques/01-rtcos.md) · Role + Task + Context + Output + Style — my default for structured outputs
+— [ReAct](./techniques/02-react.md) · Reason → Act → Observe — mental model behind agents
+— [Few-Shot](./techniques/03-few-shot.md) · Show examples before the task — go-to for classification and extraction
+— [Chain of Thought](./techniques/04-chain-of-thought.md) · Ask the model to think step by step — when reasoning needs to be auditable
+— [Zero-Shot](./techniques/05-zero-shot.md) · Direct instruction, no examples — always start here
+— [Prompt Chaining](./techniques/06-prompt-chaining.md) · Output of step 1 → input of step 2 — how real pipelines work
+— [System Prompts](./techniques/07-system-prompts.md) · Product-level model config — the BA/PM's job in an AI product
+— [Self-Consistency](./techniques/08-self-consistency.md) · Run N times, take majority — for anything high-stakes
 
-| # | Technique | Best For | File |
-|---|-----------|----------|------|
-| 1 | **Role + Task + Context + Output + Style (RTCOS)** | Structured, professional outputs | [→ Read](./techniques/01-rtcos.md) |
-| 2 | **ReAct (Reason + Act)** | Agentic tasks, tool use, step-by-step decisions | [→ Read](./techniques/02-react.md) |
-| 3 | **Few-Shot Prompting** | Consistent formatting, classification tasks | [→ Read](./techniques/03-few-shot.md) |
-| 4 | **Chain of Thought (CoT)** | Complex reasoning, analysis, debugging | [→ Read](./techniques/04-chain-of-thought.md) |
-| 5 | **Zero-Shot Prompting** | Quick tasks, general instructions | [→ Read](./techniques/05-zero-shot.md) |
-| 6 | **Prompt Chaining** | Multi-step workflows, document pipelines | [→ Read](./techniques/06-prompt-chaining.md) |
-| 7 | **System Prompt Design** | Product-level LLM configuration | [→ Read](./techniques/07-system-prompts.md) |
-| 8 | **Self-Consistency** | High-stakes decisions, reducing hallucination | [→ Read](./techniques/08-self-consistency.md) |
+** Prompt engineering techniques - When to use what**
+```
+Simple task                      → Zero-Shot         → Direct instruction, no examples  
+consistent format needed         → Few-Shot          → Example 1, Example 2 → Now do this
+Structured Professional Output   → RTCOS             → Role + Task + Context + Output + Style
+Complex Reasoning                → Chain of Thought  → Ask model to think step-by-step
+Agent / tool use                 → ReAct             → Reason + Act (loop until done)
+Multi-step workflow              → Prompt Chaining   → Output of step 1 → Input of step 2
+Product-Level LLM Setup          → System Prompt     → Persona, boundaries, tone at model level
+High-Stakes / Accuracy Critical  → Self-Consistency  → Run N times, pick majority answer
+```
 
 ---
 
@@ -31,64 +41,6 @@ Ready-to-use prompts for real product work:
 | [PRD Section Drafter](./templates/prd-drafter.md) | Draft sections of a Product Requirements Doc |
 | [AI Feature Evaluator](./templates/ai-feature-evaluator.md) | Evaluate LLM output quality |
 | [Stakeholder Summary](./templates/stakeholder-summary.md) | Summarise technical docs for non-technical stakeholders |
-
----
-
-## 🧩 How Techniques Relate
-
-```
-Simple Task
-    └── Zero-Shot ──────────────────────────────► Fast, no examples needed
-    
-Consistent Format Needed
-    └── Few-Shot ────────────────────────────────► Show 2-3 examples
-
-Complex Reasoning
-    └── Chain of Thought ────────────────────────► Ask model to think step-by-step
-
-Structured Professional Output
-    └── RTCOS ───────────────────────────────────► Role + Task + Context + Output + Style
-
-Agentic / Tool-Use Task
-    └── ReAct ───────────────────────────────────► Reason → Act → Observe loop
-
-Multi-Step Workflow
-    └── Prompt Chaining ─────────────────────────► Output of step 1 → Input of step 2
-
-High-Stakes / Accuracy Critical
-    └── Self-Consistency ────────────────────────► Run N times, take majority answer
-
-Product-Level LLM Setup
-    └── System Prompt Design ────────────────────► Persona, boundaries, tone at model level
-```
-
----
-
-## 📐 My Evaluation Framework
-
-When testing a prompt in production, I assess across 5 dimensions:
-
-| Dimension | Question |
-|-----------|----------|
-| **Accuracy** | Is the output factually correct? |
-| **Completeness** | Did it cover everything the user needed? |
-| **Format** | Is the structure usable (JSON, markdown, bullets)? |
-| **Tone** | Does it match the product's voice? |
-| **Robustness** | Does it still work with unusual or edge-case inputs? |
-
----
-
-## 🔖 Quick Reference — Technique Cheat Sheet
-
-```
-RTCOS     →  Role / Task / Context / Output / Style
-ReAct     →  Reason + Act (loop until done)
-Few-Shot  →  Example 1, Example 2 → Now do this
-CoT       →  "Let's think step by step..."
-Zero-Shot →  Direct instruction, no examples
-Chaining  →  Prompt A output → Prompt B input
-Self-Con  →  Ask 3x, pick most common answer
-```
 
 ---
 
