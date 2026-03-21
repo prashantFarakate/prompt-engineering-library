@@ -1,22 +1,9 @@
 # 🧠 Prompt Engineering Library
-### A practitioner's reference for AI Product Managers & Business Analysts
+### A core prompt engineering techniques
 
-> Built by a BA working on GenAI products — this repo documents the prompt engineering techniques I use daily to improve LLM outputs, design better AI features, and communicate expectations to engineering teams.
+Personal reference I maintain while working on AI products. Notes on techniques, patterns, and things I've learned from actually using these in LLM-based systems.
+Just what I know, what I've tried, and what worked.
 
----
-
-## 📌 Why This Repo Exists
-
-When you work on AI-enabled products, prompt engineering isn't just a developer skill — it's a **product thinking skill**. As a BA/PM, understanding *how* to instruct an LLM helps you:
-
-- Write better **acceptance criteria** for AI features
-- Identify **failure modes** before they reach production
-- Collaborate effectively with ML engineers
-- Evaluate whether an AI output is "good enough" for your users
-
-This library covers the **core prompt engineering techniques** with real examples, structured templates, and notes on when (and when *not*) to use each one.
-
----
 
 ## 🗂️ Techniques Covered
 
@@ -126,12 +113,10 @@ Self-Con  →  Ask 3x, pick most common answer
 
 ## 👤 About
 
-Maintained by **Prashant Farakate** — Business Analyst with 5+ years in GenAI/ERP products.  
-Currently transitioning to AI Product Management.
+Maintained by **Prashant Farakate** — Business Analyst with 5 years in GenAI/ERP products.  
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/prashant-farakate-91a162191/)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github)](https://github.com/prashantFarakate)
 
 ---
-
-*Last updated: March 2026 | Contributions and suggestions welcome via Issues*
+Contributions and suggestions welcome via Issues*
