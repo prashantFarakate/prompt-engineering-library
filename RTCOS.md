@@ -23,7 +23,7 @@ This is the kind of prompt I use when defining how the LLM should extract struct
 
 ```
 ROLE:
-You are an AI extraction specialist working on an Intelligent Document Processing system
+You are an expert in document processing working on an Intelligent Document Processing system
 for accounts payable automation.
 
 TASK:
